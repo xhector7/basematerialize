@@ -18,33 +18,137 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>Base Materialize</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@materializecss/materialize/dist/css/materialize.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="blue">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">
+            MaterialApp
+        </a>
+
+        <a
+            href="#"
+            data-target="slide-out"
+            class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+</nav>
+
+<ul id="slide-out" class="sidenav">
+
+    <li>
+        <div class="user-view">
+
+            <div class="background blue"></div>
+
+            <a href="#">
+                <img
+                    class="circle"
+                    src="">
+            </a>
+
+            <a href="#">
+                <span class="white-text name">
+                    Hector
+                </span>
+            </a>
+
+            <a href="#">
+                <span class="white-text email">
+                    hector@gmail.com
+                </span>
+            </a>
+
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+    </li>
+
+    <li>
+        <a href="#inici">
+            <i class="material-icons">home</i>
+            Inici
+        </a>
+    </li>
+
+    <li>
+        <a href="#perfil">
+            <i class="material-icons">person</i>
+            Perfil
+        </a>
+    </li>
+
+    <li>
+        <a href="#config">
+            <i class="material-icons">settings</i>
+            Configuració
+        </a>
+    </li>
+
+</ul>
+
+<div class="container">
+
+    <ul class="tabs">
+
+        <li class="tab col s3">
+            <a href="#inici">
+                Inici
+            </a>
+        </li>
+
+        <li class="tab col s3">
+            <a href="#perfil">
+                Perfil
+            </a>
+        </li>
+
+        <li class="tab col s3">
+            <a href="#config">
+                Configuració
+            </a>
+        </li>
+
+    </ul>
+
+    <div id="inici" class="section">
+        <h4>Inici</h4>
+        <p>Pantalla principal de l'aplicació.</p>
+    </div>
+
+    <div id="perfil" class="section">
+        <h4>Perfil</h4>
+        <p>Dades de l'usuari.</p>
+    </div>
+
+    <div id="config" class="section">
+        <h4>Configuració</h4>
+        <p>Opcions de l'aplicació.</p>
+    </div>
+
+</div>
+
+<script src="cordova.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize/dist/js/materialize.min.js"></script>
+
+<script src="js/index.js"></script>
+
+</body>
 </html>
